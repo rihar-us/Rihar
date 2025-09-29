@@ -41,7 +41,6 @@
             100% { background-position: 0% 50%; }
         }
 
-        /* Enhanced floating hearts */
         .floating-hearts {
             position: fixed;
             top: 0;
@@ -80,7 +79,6 @@
             }
         }
 
-        /* Navigation */
         .navbar {
             position: fixed;
             top: 0;
@@ -154,7 +152,6 @@
             to { opacity: 1; transform: translateY(0); }
         }
 
-        /* Hero Section */
         .hero {
             text-align: center;
             padding: 60px 40px;
@@ -241,7 +238,6 @@
             animation: heartbeat 1.5s ease-in-out infinite;
         }
 
-        /* Countdown Section */
         .countdown-section {
             margin: 40px 0;
             padding: 40px;
@@ -316,7 +312,6 @@
             opacity: 0.9;
         }
 
-        /* Timeline Section */
         .timeline-section {
             background: rgba(255, 255, 255, 0.95);
             border-radius: 30px;
@@ -400,7 +395,6 @@
             font-weight: 600;
         }
 
-        /* Photo Gallery Carousel */
         .gallery-section {
             background: rgba(255, 255, 255, 0.95);
             border-radius: 30px;
@@ -445,7 +439,6 @@
             font-size: 1.1rem;
         }
 
-        /* Interactive Messages */
         .message-section {
             background: rgba(255, 255, 255, 0.95);
             border-radius: 30px;
@@ -490,7 +483,6 @@
             box-shadow: 0 15px 30px rgba(255, 118, 117, 0.4);
         }
 
-        /* Love Notes */
         .notes-container {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -529,7 +521,6 @@
             font-weight: bold;
         }
 
-        /* Bucket List Styles */
         .bucket-list {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -578,7 +569,6 @@
             margin-top: 10px;
         }
 
-        /* Private Space */
         .private-space {
             background: var(--private-space-bg);
             border-radius: 30px;
@@ -630,7 +620,6 @@
             transform: translateY(-3px);
         }
 
-        /* Counter Sections */
         .counter-section {
             background: rgba(255, 255, 255, 0.95);
             border-radius: 30px;
@@ -676,7 +665,6 @@
             margin-top: 10px;
         }
 
-        /* Section Headers */
         .section-header {
             text-align: center;
             margin-bottom: 40px;
@@ -701,7 +689,23 @@
             font-style: italic;
         }
 
-        /* Responsive Design */
+        #year-selector {
+            padding: 10px 20px;
+            font-size: 1.1rem;
+            border-radius: 25px;
+            border: 2px solid rgba(255,255,255,0.5);
+            background: rgba(255,255,255,0.2);
+            color: white;
+            cursor: pointer;
+            font-weight: 600;
+            backdrop-filter: blur(10px);
+        }
+
+        #year-selector option {
+            background: #0984e3;
+            color: white;
+        }
+
         @media (max-width: 768px) {
             .nav-menu {
                 gap: 15px;
@@ -714,6 +718,11 @@
             
             .names {
                 font-size: 2.5rem;
+            }
+            
+            #year-selector {
+                width: 100%;
+                margin-top: 10px;
             }
             
             .countdown {
@@ -815,7 +824,30 @@
             
             <div class="countdown-section">
                 <div class="countdown-content">
-                    <h2 class="countdown-title">Countdown to Our 1-Year Anniversary! 🎉</h2>
+                    <!-- Anniversary Year Selector -->
+                    <div style="margin-bottom: 30px;">
+                        <label for="year-selector" style="font-size: 1.2rem; margin-right: 15px; font-weight: 500;">Our Anniversary Year:</label>
+                        <select id="year-selector" onchange="updateAnniversaryYear()">
+                            <option value="1">1st Year</option>
+                            <option value="2">2nd Year</option>
+                            <option value="3">3rd Year</option>
+                            <option value="4">4th Year</option>
+                            <option value="5">5th Year</option>
+                            <option value="6">6th Year</option>
+                            <option value="7">7th Year</option>
+                            <option value="8">8th Year</option>
+                            <option value="9">9th Year</option>
+                            <option value="10">10th Year</option>
+                            <option value="15">15th Year</option>
+                            <option value="20">20th Year</option>
+                            <option value="25">25th Year</option>
+                            <option value="30">30th Year</option>
+                            <option value="40">40th Year</option>
+                            <option value="50">50th Year</option>
+                        </select>
+                    </div>
+                    
+                    <h2 class="countdown-title" id="countdown-title">Countdown to Our 1st Anniversary! 🎉</h2>
                     <div class="countdown" id="countdown">
                         <div class="time-unit">
                             <span class="time-number" id="days">00</span>
@@ -871,33 +903,38 @@
                     <div class="carousel-slide">
                         <img src="image13.jpg" alt="A glance, a lifetime">
                         <div class="carousel-caption">
-"We write our love story in stolen glances." ✨👀                        </div>
+                            "We write our love story in stolen glances." ✨👀
+                        </div>
                     </div>
                     <div class="carousel-slide">
                         <img src="image15.jpg" alt="Our forever frame">
                         <div class="carousel-caption">
-"Your smile is my favorite kind of sunrise." 🌅❤️                        </div>
+                            "Your smile is my favorite kind of sunrise." 🌅❤️
+                        </div>
                     </div>
                     <div class="carousel-slide">
                         <img src="image9.jpg" alt="Pieces of our heart">
                         <div class="carousel-caption">
-"With you, ordinary moments turn into timeless memories." 🕊️🌿                        </div>
+                            "With you, ordinary moments turn into timeless memories." 🕊️🌿
+                        </div>
                     </div>
                     <div class="carousel-slide">
                         <img src="image12.jpg" alt="Captured in time">
                         <div class="carousel-caption">
-"You and I — a forever kind of story." 🗺️💫                        </div>
+                            "You and I — a forever kind of story." 🗺️💫
+                        </div>
                     </div>
                     <div class="carousel-slide">
                         <img src="image8.jpg" alt="Moments made of magic">
                         <div class="carousel-caption">
-"My favorite place to be at is in your arms." 🏡❤️                        </div>
+                            "My favorite place to be at is in your arms." 🏡❤️
+                        </div>
                     </div>
                     <div class="carousel-slide">
                         <img src="image14.jpg" alt="Where joy lives">
                         <div class="carousel-caption">
-"Love is in the way our souls quietly recognize each other." 🌙💭
-</div>
+                            "Love is in the way our souls quietly recognize each other." 🌙💭
+                        </div>
                     </div>
                     <div class="carousel-slide">
                         <img src="image11.jpg" alt="Whispers of love">
@@ -905,7 +942,7 @@
                             "My favourite touch is your sweet little forehead kisses" 🪄❤️
                         </div>
                     </div>
-                     <div class="carousel-slide">
+                    <div class="carousel-slide">
                         <img src="image10.jpg" alt="My cute princess's charming lover">
                         <div class="carousel-caption">
                             "Meet my forever Love, my bride, Trisha" 🕊️❤️
@@ -946,7 +983,6 @@
             
             <div>
                 <div class="timeline">
-
                     <div class="timeline-item left">
                         <div class="timeline-content">
                             <div class="timeline-date">November 18, 2024</div>
@@ -968,7 +1004,7 @@
                             <p>Overcame the first and the most difficult challenge of our journey until then. One we thought we could never get through. But here we are, together and stronger. Because instead of problems we focused on our Love, and a Second Chance, promising each other, that we won't let the other one regret and will keep each other close, always and forever. 🤝</p>
                         </div>
                     </div>
-		    <div class="timeline-item right">
+                    <div class="timeline-item right">
                         <div class="timeline-content">
                             <div class="timeline-date">All this time</div>
                             <h3 class="timeline-title">😇 The Growth & Learnings</h3>
@@ -1047,7 +1083,7 @@
             </div>
             
             <div class="bucket-list" id="bucketList">
-                <div class="bucket-item"> <For completed task, class is "bucket-item completed">
+                <div class="bucket-item">
                     <h3 class="bucket-title">Go on our first trip together ✈</h3>
                     <p class="bucket-description">Explore a new city, create memories, and enjoy each other's company in a beautiful place.</p>
                 </div>
@@ -1099,7 +1135,7 @@
                     </a>
                     <p class="privacy-note" style="margin-top: 25px; font-size: 0.9rem; opacity: 0.8; font-style: italic; max-width: 600px; margin-left: auto; margin-right: auto;">
                         🔐 This is just for us, to understand each other's feelings and emotions better, not just as a couple, but even as best friends, so that we can understand each other's perspectives better. So that we can see things from each other's POV.
-		<br> Special message for Mr. Cheater, NO CHEATING ALLOWED HERE!
+                        <br> Special message for Mr. Cheater, NO CHEATING ALLOWED HERE!
                     </p>
                 </div>
             </div>
@@ -1179,9 +1215,42 @@
     <script>
         // Configuration
         const startDate = new Date("November 25, 2024 00:19:45").getTime();
-        const anniversaryDate = new Date("November 25, 2025 00:19:45").getTime();
+        let selectedYear = 1;
+        
+        function getAnniversaryDate(year) {
+            const date = new Date(startDate);
+            date.setFullYear(date.getFullYear() + year);
+            return date.getTime();
+        }
+        
+        let anniversaryDate = getAnniversaryDate(selectedYear);
 
-        // Enhanced floating hearts
+        function updateAnniversaryYear() {
+            selectedYear = parseInt(document.getElementById('year-selector').value);
+            anniversaryDate = getAnniversaryDate(selectedYear);
+            
+            const suffix = getOrdinalSuffix(selectedYear);
+            document.getElementById('countdown-title').textContent = `Countdown to Our ${selectedYear}${suffix} Anniversary! 🎉`;
+            
+            const targetDate = new Date(anniversaryDate);
+            document.getElementById('target-date').textContent = targetDate.toLocaleDateString('en-US', { 
+                year: 'numeric', 
+                month: 'long', 
+                day: 'numeric' 
+            });
+            
+            updateCounters();
+        }
+        
+        function getOrdinalSuffix(num) {
+            const j = num % 10;
+            const k = num % 100;
+            if (j === 1 && k !== 11) return "st";
+            if (j === 2 && k !== 12) return "nd";
+            if (j === 3 && k !== 13) return "rd";
+            return "th";
+        }
+
         const heartEmojis = ['💖', '💕', '💗', '💝', '💘', '💌', '✨', '🌟', '🌸', '🦋'];
 
         function createFloatingHeart() {
@@ -1198,10 +1267,8 @@
             }, 30000);
         }
 
-        // Create hearts periodically
         setInterval(createFloatingHeart, 2000);
 
-        // Love messages arrays
         const loveMessages = [
             "You are my favorite notification 😊💕",
             "You make ordinary moments feel extraordinary ✨",
@@ -1215,8 +1282,8 @@
             "You make me want to be the best version of myself 🌟",
             "Our love story is my favorite fairy tale 📚💕",
             "You're my sunshine on cloudy days ☀️🌈",
-	    "Your smile is the cutest and the best thing in the world ❤️😊",
-	    "I love it how your lips make a heart whenever you pout 😘🤪"
+            "Your smile is the cutest and the best thing in the world ❤️😊",
+            "I love it how your lips make a heart whenever you pout 😘🤪"
         ];
 
         const compliments = [
@@ -1226,7 +1293,7 @@
             "Your stupidness amazes me every day 🧠✨",
             "You have the most contagious laugh 😄",
             "You're so thoughtful and caring 🤗",
-            "Your are really good at making me feel the luckiest 🤩",
+            "You are really good at making me feel the luckiest 🤩",
             "You have amazing taste in everything(like in gf)! 👌",
             "You're naturally beautiful inside and out 🌺",
             "You are becoming mota because you have been sucking my blood 😂💕",
@@ -1242,7 +1309,6 @@
             "My darling, even flowers need rain to grow 🌧️🌺 This difficult moment is just helping us bloom into an even more amazing version of ourself. We've got this! Just give some time, and everything will be okkay💪💖"
         ];
 
-        // Navigation functionality
         const navItems = document.querySelectorAll('.nav-item');
         const pages = document.querySelectorAll('.page');
 
@@ -1258,7 +1324,6 @@
             });
         });
 
-        // Love meter heartbeat toggle
         let isHeartbeating = false;
         
         function toggleHeartbeat() {
@@ -1318,11 +1383,9 @@
             document.getElementById('mood-message').innerHTML = booster;
         }
 
-        // Counter updates
         function updateCounters() {
             const now = new Date().getTime();
             
-            // Time together
             const timeElapsed = now - startDate;
             const tDays = Math.floor(timeElapsed / (1000 * 60 * 60 * 24));
             const tHours = Math.floor(timeElapsed / (1000 * 60 * 60));
@@ -1332,12 +1395,10 @@
             document.getElementById('t-hours').textContent = tHours.toLocaleString();
             document.getElementById('t-minutes').textContent = tMinutes.toLocaleString();
 
-            // Stats page counters
             document.getElementById('daysCounter').textContent = tDays;
             document.getElementById('hoursCounter').textContent = tHours.toLocaleString();
             document.getElementById('minutesCounter').textContent = tMinutes.toLocaleString();
 
-            // Anniversary countdown
             const distance = anniversaryDate - now;
             if (distance > 0) {
                 const days = Math.floor(distance / (1000 * 60 * 60 * 24));
